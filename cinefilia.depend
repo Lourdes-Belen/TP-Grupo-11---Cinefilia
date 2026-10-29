@@ -1,0 +1,581 @@
+# depslib dependency file v1.0
+1792207158 source:c:\users\manum\downloads\tp-codex\tp-codex\alquiler.c
+	<stdlib.h>
+	<string.h>
+	"alquiler.h"
+	"cadena.h"
+	"util.h"
+
+1792207158 c:\users\manum\downloads\tp-codex\tp-codex\alquiler.h
+	"socio.h"
+	"titulo.h"
+
+1792207158 c:\users\manum\downloads\tp-codex\tp-codex\socio.h
+	<stdio.h>
+	"fecha.h"
+	"indice.h"
+	"lectura.h"
+	"validaciones.h"
+
+1792207158 c:\users\manum\downloads\tp-codex\tp-codex\fecha.h
+
+1793147153 c:\users\manum\downloads\tp-codex\tp-codex\indice.h
+	<stddef.h>
+
+1792207158 c:\users\manum\downloads\tp-codex\tp-codex\lectura.h
+	<stdio.h>
+	"indice.h"
+	"fecha.h"
+
+1792207158 c:\users\manum\downloads\tp-codex\tp-codex\validaciones.h
+
+1792207158 c:\users\manum\downloads\tp-codex\tp-codex\titulo.h
+	<stdio.h>
+	"indice.h"
+	"lectura.h"
+
+1792207158 c:\users\manum\downloads\tp-codex\tp-codex\cadena.h
+
+1792207158 c:\users\manum\downloads\tp-codex\tp-codex\util.h
+	<stdio.h>
+	<stdlib.h>
+	"alquiler.h"
+
+1792207158 source:c:\users\manum\downloads\tp-codex\tp-codex\auditoria.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"auditoria.h"
+	"lectura.h"
+	"cadena.h"
+	"util.h"
+	"indice.h"
+
+1792207158 c:\users\manum\downloads\tp-codex\tp-codex\auditoria.h
+	"fecha.h"
+
+1792207158 source:c:\users\manum\downloads\tp-codex\tp-codex\cadena.c
+	<string.h>
+	<ctype.h>
+	<stddef.h>
+	"cadena.h"
+
+1792207158 source:c:\users\manum\downloads\tp-codex\tp-codex\fecha.c
+	<stdio.h>
+	<string.h>
+	<ctype.h>
+	<time.h>
+	"fecha.h"
+	"util.h"
+	"indice.h"
+
+1792207158 source:c:\users\manum\downloads\tp-codex\tp-codex\indice.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"indice.h"
+
+1792207158 source:c:\users\manum\downloads\tp-codex\tp-codex\lectura.c
+	<string.h>
+	"lectura.h"
+	"util.h"
+	"cadena.h"
+	"socio.h"
+	"titulo.h"
+	"config.h"
+
+1792207158 c:\users\manum\downloads\tp-codex\tp-codex\config.h
+
+1792207158 source:c:\users\manum\downloads\tp-codex\tp-codex\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"config.h"
+	"util.h"
+	"menu.h"
+	"fecha.h"
+	"indice.h"
+	"lectura.h"
+	"socio.h"
+	"titulo.h"
+	"novedad.h"
+	"alquiler.h"
+	"auditoria.h"
+	"generador.h"
+
+1792207158 c:\users\manum\downloads\tp-codex\tp-codex\menu.h
+
+1792207158 c:\users\manum\downloads\tp-codex\tp-codex\novedad.h
+	"titulo.h"
+
+1792207158 c:\users\manum\downloads\tp-codex\tp-codex\generador.h
+
+1792207158 source:c:\users\manum\downloads\tp-codex\tp-codex\novedad.c
+	<string.h>
+	"novedad.h"
+	"cadena.h"
+
+1792207158 source:c:\users\manum\downloads\tp-codex\tp-codex\socio.c
+	<stdlib.h>
+	<string.h>
+	"socio.h"
+	"cadena.h"
+	"util.h"
+	"auditoria.h"
+	"config.h"
+	"menu.h"
+
+1792207158 source:c:\users\manum\downloads\tp-codex\tp-codex\titulo.c
+	<stdlib.h>
+	<string.h>
+	"titulo.h"
+	"cadena.h"
+	"util.h"
+
+1792207158 source:c:\users\manum\downloads\tp-codex\tp-codex\util.c
+	<string.h>
+	"util.h"
+	"cadena.h"
+	"config.h"
+
+1792207158 source:c:\users\manum\downloads\tp-codex\tp-codex\validaciones.c
+	<ctype.h>
+	<stdio.h>
+	<string.h>
+	"validaciones.h"
+
+1793153240 source:c:\users\manum\downloads\tp-codex(con antigravity)\tp-codex\alquiler.c
+	<stdlib.h>
+	<string.h>
+	"alquiler.h"
+	"cadena.h"
+	"util.h"
+
+1792207158 c:\users\manum\downloads\tp-codex(con antigravity)\tp-codex\alquiler.h
+	"socio.h"
+	"titulo.h"
+
+1792207158 c:\users\manum\downloads\tp-codex(con antigravity)\tp-codex\socio.h
+	<stdio.h>
+	"fecha.h"
+	"indice.h"
+	"lectura.h"
+	"validaciones.h"
+
+1792207158 c:\users\manum\downloads\tp-codex(con antigravity)\tp-codex\fecha.h
+
+1793147153 c:\users\manum\downloads\tp-codex(con antigravity)\tp-codex\indice.h
+	<stddef.h>
+
+1792207158 c:\users\manum\downloads\tp-codex(con antigravity)\tp-codex\lectura.h
+	<stdio.h>
+	"indice.h"
+	"fecha.h"
+
+1792207158 c:\users\manum\downloads\tp-codex(con antigravity)\tp-codex\validaciones.h
+
+1792207158 c:\users\manum\downloads\tp-codex(con antigravity)\tp-codex\titulo.h
+	<stdio.h>
+	"indice.h"
+	"lectura.h"
+
+1793153910 c:\users\manum\downloads\tp-codex(con antigravity)\tp-codex\cadena.h
+
+1792207158 c:\users\manum\downloads\tp-codex(con antigravity)\tp-codex\util.h
+	<stdio.h>
+	<stdlib.h>
+	"alquiler.h"
+
+1793147153 source:c:\users\manum\downloads\tp-codex(con antigravity)\tp-codex\auditoria.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"auditoria.h"
+	"lectura.h"
+	"cadena.h"
+	"util.h"
+	"indice.h"
+
+1792207158 c:\users\manum\downloads\tp-codex(con antigravity)\tp-codex\auditoria.h
+	"fecha.h"
+
+1793153899 source:c:\users\manum\downloads\tp-codex(con antigravity)\tp-codex\cadena.c
+	<string.h>
+	<ctype.h>
+	<stddef.h>
+	"cadena.h"
+
+1793146785 source:c:\users\manum\downloads\tp-codex(con antigravity)\tp-codex\fecha.c
+	<stdio.h>
+	<string.h>
+	<ctype.h>
+	<time.h>
+	"fecha.h"
+	"util.h"
+	"indice.h"
+
+1793153240 source:c:\users\manum\downloads\tp-codex(con antigravity)\tp-codex\indice.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"indice.h"
+
+1793152396 source:c:\users\manum\downloads\tp-codex(con antigravity)\tp-codex\lectura.c
+	<string.h>
+	"lectura.h"
+	"util.h"
+	"cadena.h"
+	"socio.h"
+	"titulo.h"
+	"config.h"
+
+1792207158 c:\users\manum\downloads\tp-codex(con antigravity)\tp-codex\config.h
+
+1792207158 source:c:\users\manum\downloads\tp-codex(con antigravity)\tp-codex\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"config.h"
+	"util.h"
+	"menu.h"
+	"fecha.h"
+	"indice.h"
+	"lectura.h"
+	"socio.h"
+	"titulo.h"
+	"novedad.h"
+	"alquiler.h"
+	"auditoria.h"
+	"generador.h"
+
+1792207158 c:\users\manum\downloads\tp-codex(con antigravity)\tp-codex\menu.h
+
+1792207158 c:\users\manum\downloads\tp-codex(con antigravity)\tp-codex\novedad.h
+	"titulo.h"
+
+1792207158 c:\users\manum\downloads\tp-codex(con antigravity)\tp-codex\generador.h
+
+1793152655 source:c:\users\manum\downloads\tp-codex(con antigravity)\tp-codex\novedad.c
+	<string.h>
+	"novedad.h"
+	"cadena.h"
+
+1793154739 source:c:\users\manum\downloads\tp-codex(con antigravity)\tp-codex\socio.c
+	<stdlib.h>
+	<string.h>
+	"socio.h"
+	"cadena.h"
+	"util.h"
+	"auditoria.h"
+	"config.h"
+	"menu.h"
+
+1793152735 source:c:\users\manum\downloads\tp-codex(con antigravity)\tp-codex\titulo.c
+	<stdlib.h>
+	<string.h>
+	"titulo.h"
+	"cadena.h"
+	"util.h"
+
+1793147153 source:c:\users\manum\downloads\tp-codex(con antigravity)\tp-codex\util.c
+	<string.h>
+	"util.h"
+	"cadena.h"
+	"config.h"
+
+1793146752 source:c:\users\manum\downloads\tp-codex(con antigravity)\tp-codex\validaciones.c
+	<ctype.h>
+	<stdio.h>
+	<string.h>
+	"validaciones.h"
+
+1793243038 source:c:\users\lourdesbelenbarbagel\downloads\tp-codex(con antigravity)\tp-codex(con antigravity)\tp-codex\alquiler.c
+	<stdlib.h>
+	<string.h>
+	"alquiler.h"
+	"cadena.h"
+	"util.h"
+
+1793193415 c:\users\lourdesbelenbarbagel\downloads\tp-codex(con antigravity)\tp-codex(con antigravity)\tp-codex\alquiler.h
+	"socio.h"
+	"titulo.h"
+
+1793193415 c:\users\lourdesbelenbarbagel\downloads\tp-codex(con antigravity)\tp-codex(con antigravity)\tp-codex\socio.h
+	<stdio.h>
+	"fecha.h"
+	"indice.h"
+	"lectura.h"
+	"validaciones.h"
+
+1793193415 c:\users\lourdesbelenbarbagel\downloads\tp-codex(con antigravity)\tp-codex(con antigravity)\tp-codex\fecha.h
+
+1793193415 c:\users\lourdesbelenbarbagel\downloads\tp-codex(con antigravity)\tp-codex(con antigravity)\tp-codex\indice.h
+	<stddef.h>
+
+1793193415 c:\users\lourdesbelenbarbagel\downloads\tp-codex(con antigravity)\tp-codex(con antigravity)\tp-codex\lectura.h
+	<stdio.h>
+	"indice.h"
+	"fecha.h"
+
+1793193415 c:\users\lourdesbelenbarbagel\downloads\tp-codex(con antigravity)\tp-codex(con antigravity)\tp-codex\validaciones.h
+
+1793193415 c:\users\lourdesbelenbarbagel\downloads\tp-codex(con antigravity)\tp-codex(con antigravity)\tp-codex\titulo.h
+	<stdio.h>
+	"indice.h"
+	"lectura.h"
+
+1793193415 c:\users\lourdesbelenbarbagel\downloads\tp-codex(con antigravity)\tp-codex(con antigravity)\tp-codex\cadena.h
+
+1793193415 c:\users\lourdesbelenbarbagel\downloads\tp-codex(con antigravity)\tp-codex(con antigravity)\tp-codex\util.h
+	<stdio.h>
+	<stdlib.h>
+	"alquiler.h"
+
+1793240504 source:c:\users\lourdesbelenbarbagel\downloads\tp-codex(con antigravity)\tp-codex(con antigravity)\tp-codex\auditoria.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"auditoria.h"
+	"lectura.h"
+	"cadena.h"
+	"util.h"
+	"indice.h"
+
+1793193415 c:\users\lourdesbelenbarbagel\downloads\tp-codex(con antigravity)\tp-codex(con antigravity)\tp-codex\auditoria.h
+	"fecha.h"
+
+1793245335 source:c:\users\lourdesbelenbarbagel\downloads\tp-codex(con antigravity)\tp-codex(con antigravity)\tp-codex\cadena.c
+	<string.h>
+	<ctype.h>
+	<stddef.h>
+	"cadena.h"
+
+1793245151 source:c:\users\lourdesbelenbarbagel\downloads\tp-codex(con antigravity)\tp-codex(con antigravity)\tp-codex\indice.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"indice.h"
+
+1793245151 source:c:\users\lourdesbelenbarbagel\downloads\tp-codex(con antigravity)\tp-codex(con antigravity)\tp-codex\lectura.c
+	<string.h>
+	"lectura.h"
+	"util.h"
+	"cadena.h"
+	"socio.h"
+	"titulo.h"
+	"config.h"
+
+1793193415 c:\users\lourdesbelenbarbagel\downloads\tp-codex(con antigravity)\tp-codex(con antigravity)\tp-codex\config.h
+
+1793193415 source:c:\users\lourdesbelenbarbagel\downloads\tp-codex(con antigravity)\tp-codex(con antigravity)\tp-codex\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"config.h"
+	"util.h"
+	"menu.h"
+	"fecha.h"
+	"indice.h"
+	"lectura.h"
+	"socio.h"
+	"titulo.h"
+	"novedad.h"
+	"alquiler.h"
+	"auditoria.h"
+	"generador.h"
+
+1793193415 c:\users\lourdesbelenbarbagel\downloads\tp-codex(con antigravity)\tp-codex(con antigravity)\tp-codex\menu.h
+
+1793193415 c:\users\lourdesbelenbarbagel\downloads\tp-codex(con antigravity)\tp-codex(con antigravity)\tp-codex\novedad.h
+	"titulo.h"
+
+1793193415 c:\users\lourdesbelenbarbagel\downloads\tp-codex(con antigravity)\tp-codex(con antigravity)\tp-codex\generador.h
+
+1793243255 source:c:\users\lourdesbelenbarbagel\downloads\tp-codex(con antigravity)\tp-codex(con antigravity)\tp-codex\novedad.c
+	<string.h>
+	"novedad.h"
+	"cadena.h"
+
+1793245151 source:c:\users\lourdesbelenbarbagel\downloads\tp-codex(con antigravity)\tp-codex(con antigravity)\tp-codex\socio.c
+	<stdlib.h>
+	<string.h>
+	"socio.h"
+	"cadena.h"
+	"util.h"
+	"auditoria.h"
+	"config.h"
+	"menu.h"
+
+1793239029 source:c:\users\lourdesbelenbarbagel\downloads\tp-codex(con antigravity)\tp-codex(con antigravity)\tp-codex\titulo.c
+	<stdlib.h>
+	<string.h>
+	"titulo.h"
+	"cadena.h"
+	"util.h"
+
+1793240618 source:c:\users\lourdesbelenbarbagel\downloads\tp-codex(con antigravity)\tp-codex(con antigravity)\tp-codex\util.c
+	<string.h>
+	"util.h"
+	"cadena.h"
+	"config.h"
+
+1793245151 source:c:\users\lourdesbelenbarbagel\downloads\tp-codex(con antigravity)\tp-codex(con antigravity)\tp-codex\validaciones.c
+	<ctype.h>
+	<stdio.h>
+	<string.h>
+	"validaciones.h"
+
+1793243485 source:c:\users\lourdesbelenbarbagel\downloads\tp-codex(con antigravity)\tp-codex(con antigravity)\tp-codex\fecha.c
+	<stdio.h>
+	<string.h>
+	<ctype.h>
+	<time.h>
+	"fecha.h"
+	"util.h"
+	"indice.h"
+
+1793243038 source:c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\alquiler.c
+	<stdlib.h>
+	<string.h>
+	"alquiler.h"
+	"cadena.h"
+	"util.h"
+
+1793193415 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\alquiler.h
+	"socio.h"
+	"titulo.h"
+
+1793193415 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\socio.h
+	<stdio.h>
+	"fecha.h"
+	"indice.h"
+	"lectura.h"
+	"validaciones.h"
+
+1793193415 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\fecha.h
+
+1793193415 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\indice.h
+	<stddef.h>
+
+1793193415 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\lectura.h
+	<stdio.h>
+	"indice.h"
+	"fecha.h"
+
+1793193415 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\validaciones.h
+
+1793193415 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\titulo.h
+	<stdio.h>
+	"indice.h"
+	"lectura.h"
+
+1793193415 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\cadena.h
+
+1793193415 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\util.h
+	<stdio.h>
+	<stdlib.h>
+	"alquiler.h"
+
+1793240504 source:c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\auditoria.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"auditoria.h"
+	"lectura.h"
+	"cadena.h"
+	"util.h"
+	"indice.h"
+
+1793193415 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\auditoria.h
+	"fecha.h"
+
+1793245335 source:c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\cadena.c
+	<string.h>
+	<ctype.h>
+	<stddef.h>
+	"cadena.h"
+
+1793243485 source:c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\fecha.c
+	<stdio.h>
+	<string.h>
+	<ctype.h>
+	<time.h>
+	"fecha.h"
+	"util.h"
+	"indice.h"
+
+1793245151 source:c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\indice.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"indice.h"
+
+1793245151 source:c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\lectura.c
+	<string.h>
+	"lectura.h"
+	"util.h"
+	"cadena.h"
+	"socio.h"
+	"titulo.h"
+	"config.h"
+
+1793193415 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\config.h
+
+1793193415 source:c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"config.h"
+	"util.h"
+	"menu.h"
+	"fecha.h"
+	"indice.h"
+	"lectura.h"
+	"socio.h"
+	"titulo.h"
+	"novedad.h"
+	"alquiler.h"
+	"auditoria.h"
+	"generador.h"
+
+1793193415 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\menu.h
+
+1793193415 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\novedad.h
+	"titulo.h"
+
+1793193415 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\generador.h
+
+1793243255 source:c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\novedad.c
+	<string.h>
+	"novedad.h"
+	"cadena.h"
+
+1793245151 source:c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\socio.c
+	<stdlib.h>
+	<string.h>
+	"socio.h"
+	"cadena.h"
+	"util.h"
+	"auditoria.h"
+	"config.h"
+	"menu.h"
+
+1793239029 source:c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\titulo.c
+	<stdlib.h>
+	<string.h>
+	"titulo.h"
+	"cadena.h"
+	"util.h"
+
+1793240618 source:c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\util.c
+	<string.h>
+	"util.h"
+	"cadena.h"
+	"config.h"
+
+1793245151 source:c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\validaciones.c
+	<ctype.h>
+	<stdio.h>
+	<string.h>
+	"validaciones.h"
+
