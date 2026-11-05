@@ -30,13 +30,14 @@
 #define MENU_LST_TIT   '9'
 #define MENU_AUDITORIA 'A'
 #define MENU_GENERAR_PRUEBA 'G'
+#define MENU_CONSULTAR_ID 'C'       /// ( LU Practica defensa) Consultar un ID
+#define MENU_BAJA_TITULO 'B'        /// ( LU Practica defensa) Dar de Baja Titulos sin Stock
+#define MENU_LISTAR_TITILOS 'L'     /// ( LU Practica defensa) Listar todos los titulos.
 #define MENU_SALIR     'S'
-#define MENU_CONSULTAR_ID 'C' //EJERCICIO 1 LU (Practica defensa) Consultar un ID
-#define MENU_BAJA_TITULO 'B'  //EJERCICIO 2 LU (Practica defensa) Dar de Baja Titulos sin Stock
 
 static const char OPCIONES[][LENGTH_MENU] =
 {
-    "123456789AGSCB", ///Se agrega la letra, de lo que agrege ACA!
+    "123456789AGCBLS", ///Se agrega la letra, de lo que agrege ACA! - Agregue C - B - L
     "Generar archivos binarios desde CSV",
     "Alta / Modificacion manual de socio",
     "Baja logica de socio",
@@ -48,9 +49,10 @@ static const char OPCIONES[][LENGTH_MENU] =
     "Listado de titulos disponibles",
     "Visualizar auditoria de errores de socios",
     "Generar archivos de prueba (CSV y novedades)",
-    "Salir y persistir",
-    "Consultar Titulo por ID", // EJERCICIO 1 LU
-    "Dar de Baja Titulos sin Stock" //EJERCICIO 2 LU
+    "Consultar Titulo por ID",                      /// LU - EJERCICIO 1
+    "Dar de Baja Titulos sin Stock",                /// LU - EJERCICIO 2
+    "Listar todos los Titulos",                     /// LU - LISTAR TITULOS
+    "Salir y persistir"
 };
 
 /******************************************************************************
@@ -146,14 +148,17 @@ int main(void)
             case MENU_GENERAR_PRUEBA:
                 generar_archivos_prueba();
                 break;
+            case MENU_CONSULTAR_ID: /**AGREGADO LU - CONSULTAR UN ID***/
+                consultar_titulo_id(&ind_titulos, ARCH_TITULOS_BIN);
+                break;
+            case MENU_BAJA_TITULO: /**AGREGADO LU - DAR DE BAJA SIN STOCK***/
+                baja_titulos_sin_stock(&ind_titulos, ARCH_TITULOS_BIN);
+                break;
+            case MENU_LISTAR_TITILOS: /**AGREGADO LU - LISTAR TITULOS***/
+                listar_todos_los_titulos(ARCH_TITULOS_BIN);
+                break;
             case MENU_SALIR:
                 salir_y_persistir_ALU(&ind_socios, &ind_titulos, matriz_consumo, &fecha_proceso);
-                break;
-            case MENU_CONSULTAR_ID:
-                consultar_titulo_id(&ind_titulos, ARCH_TITULOS_BIN); //Agregado por LU
-                break;
-            case MENU_BAJA_TITULO:
-                baja_titulos_sin_stock(&ind_titulos, ARCH_TITULOS_BIN);
                 break;
         }
         if(op != MENU_SALIR)

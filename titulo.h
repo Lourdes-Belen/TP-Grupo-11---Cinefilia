@@ -52,5 +52,6 @@ int titulos_listar_ALU(const t_indice *indice, const char *path);
 int consultar_titulo_id(t_indice *indice, const char *path);
 ///EJERCICIO 2 LU - Dar de Baja Titulos sin Stock
 int baja_titulos_sin_stock(t_indice *indice, const char *path);
+int listar_todos_los_titulos(const char *path); //Funcion Lu Lista todos los titulos
 
 #endif /* TITULO_H_INCLUDED */

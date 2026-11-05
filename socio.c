@@ -936,3 +936,49 @@ void abm_socio_ALU(t_indice *indice, const t_fecha *fecha_proceso)
         }
     }
 }
+
+///***********************PRACTICA DEFENSA LU**************************///
+///## Ejercicio 3 - Listar Socios con Cuota Vencida
+int listar_socios_morosos(t_indice, const char *path, t_fecha *fecha_proceso)
+{
+    FILE *archivo_socios = fopen(path,"rb");
+
+    if(!archivo_socios)
+    {
+        printf("Error al abrir el archivo\n");
+        return ERROR;
+    }
+
+    t_socio socio; //Para el manejo del archivo
+    t_socio *morosos;
+    int cantidad_morosos = 0;
+
+    morosos = malloc(cantidad_morosos * sizeof(t_socio));
+    if(!morosos){
+        printf("Error al reservar memoria\n");
+        return ERROR;
+    }
+
+    fread(&socio,sizeof(t_socio),1,archivo_socios);
+
+    while(!feof(archivo_socios))
+    {
+
+        if(!cuota_al_dia_ALU(&socio.fecha_ultima_cuota, fecha_proceso))
+        {
+            morosos[cantidad_morosos] = socio;
+            cantidad_morosos++;
+        }
+
+        fread(&socio,sizeof(t_socio),1,archivo_socios);
+
+    }
+
+    ///Ordenar vector de morosos
+    ///mostrar moroso y calcularle los dias de atraso para mostrarlo
+
+    free(morosos);
+    fclose(archivo_socios);
+
+    return 0;
+}

@@ -154,25 +154,7 @@ int titulos_listar_ALU(const t_indice *indice, const char *path)
 }
 /*********************************************************************/
 ///***********************PRACTICA DEFENSA LU**************************///
-/* Ejercicio 1 - Consulta puntual de un titulo
-
-##Agregar una opcion **Consultar titulo por ID**.
-
-##Requerimiento:
-
-Solicitar un ID, buscarlo utilizando `indice_buscar_ALU` y mostrar todos los
-datos del titulo: ID, nombre, genero, stock y estado. Si el ID no existe o el
-titulo esta inactivo, informar claramente la situacion.
-
-## Temas que practica
-
-- TDA indice;
-- busqueda binaria;
-- uso de `t_reg_indice.nro_reg`;
-- lectura de un registro puntual con `titulo_leer_ALU`;
-- validacion de entrada numerica;
-- integracion de una nueva opcion al menu.*/
-///////////////////////////////////////////////////////////////////////////////////////////
+///## Ejercicio 1 - Consulta puntual de un titulo
 int consultar_titulo_id(t_indice *indice, const char *path)
 {
     FILE *archivo = fopen(path,"rb");
@@ -184,27 +166,24 @@ int consultar_titulo_id(t_indice *indice, const char *path)
 
     t_titulo titulo;
     t_reg_indice id_consulta;
-    size_t pos_id;
+    int pos_id;
 
-    printf("Ingrese ID del Titulo a Consultar:\n");
-    scanf("%ld",&id_consulta.id);
+    printf("Ingrese ID del titulo a consultar:\n");
+    if(scanf("%ld",&id_consulta.id)>0){ //VALIDE QUE SEA NUMERO
 
-   if(id_consulta.id >= 1 && id_consulta.id <= 10) //VALIDACION REVISAR
-    {
+        limpiar_entrada();
         pos_id = indice_buscar_ALU(indice, &id_consulta,sizeof(id_consulta), compara_reg_indice_ALU);
 
-        if(pos_id)
-        {
-            fseek(archivo,(long)id_consulta.nro_reg * sizeof(t_titulo),SEEK_SET);
-            fread(&titulo,sizeof(t_titulo),1,archivo);
-
-            titulos_encabezado();
-            titulo_mostrar(&titulo);
-
-        }else
-        {
+        if(pos_id == NO_EXISTE){
             printf("Titulo inactivo o no existe\n");
             return 0;
+
+        }else{
+            fseek(archivo,(long)id_consulta.nro_reg * sizeof(t_titulo),SEEK_SET);
+            titulo_leer(archivo,id_consulta.nro_reg,&titulo); //uso la primitiva leer titulo en lugar de fread
+            //fread(&titulo,sizeof(t_titulo),1,archivo);
+            titulos_encabezado();
+            titulo_mostrar(&titulo);
         }
     }
 
@@ -214,10 +193,10 @@ int consultar_titulo_id(t_indice *indice, const char *path)
 
 /*********************************************************************/
 ///***********************PRACTICA DEFENSA LU**************************///
+///## Ejercicio 2 - Dar de baja titulos sin stock
 int baja_titulos_sin_stock(t_indice *indice, const char *path)
 {
     FILE *archivo = fopen(path,"r+b");
-
     if(!archivo)
     {
         printf("Error al abrir el archivo\n");
@@ -231,7 +210,7 @@ int baja_titulos_sin_stock(t_indice *indice, const char *path)
 
     while(!feof(archivo))
     {
-        if(titulo.stock == 0)
+        if(titulo.stock == 0 && titulo.estado != 'B')  //Si no tiene stock y el estado ya no esta dado de baja
         {
             //CAMBIAR ESTADO
             titulo.estado = 'B';
@@ -240,7 +219,7 @@ int baja_titulos_sin_stock(t_indice *indice, const char *path)
             fwrite(&titulo,sizeof(t_titulo),1,archivo);
             fseek(archivo,0,SEEK_CUR);
 
-            //Posicionar el ID del Indice para luego eliminar
+            //Posicionar el ID del Indice para luego eliminar del indice
             registro.id = (long)titulo.id;
             //ELIMINARLO DEL INDICE
             indice_eliminar_ALU(indice,&registro,sizeof(t_reg_indice),compara_reg_indice_ALU);
@@ -249,17 +228,39 @@ int baja_titulos_sin_stock(t_indice *indice, const char *path)
             printf("Titulos dados de baja:\n");
             titulo_mostrar(&titulo);
         }
-
         fread(&titulo,sizeof(t_titulo),1,archivo);
     }
-
 
     fclose(archivo);
     return 1;
 }
 
+///***********************PRACTICA DEFENSA LU**************************///
+///## Funcion: Listar todos los titulos
+int listar_todos_los_titulos(const char *path) //Funcion Lu Lista todos los titulos
+{
+    FILE *archivo = fopen(path,"rb");
 
+    if(!archivo)
+    {
+        printf("Error al intentar leer el archivo\n");
+        return ERROR;
+    }
 
+    t_titulo titulo;
+
+    fread(&titulo,sizeof(t_titulo),1,archivo);
+    titulos_encabezado();
+
+    while(!feof(archivo))
+    {
+        titulo_mostrar(&titulo);
+        fread(&titulo,sizeof(t_titulo),1,archivo);
+    }
+
+    fclose(archivo);
+    return 1;
+}
 
 
 
