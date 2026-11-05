@@ -47,4 +47,10 @@ int texto_a_titulo_ALU(const char *linea, void *reg);
 int valida_titulo_ALU(void *reg, const t_contexto *ctx, char *tipo_error);
 int titulos_listar_ALU(const t_indice *indice, const char *path);
 
+///**********************PRACTICA DEFENSA LU*****************************///
+///EJERCICIO 1 LU - Consultar TITULO por ID
+int consultar_titulo_id(t_indice *indice, const char *path);
+///EJERCICIO 2 LU - Dar de Baja Titulos sin Stock
+int baja_titulos_sin_stock(t_indice *indice, const char *path);
+
 #endif /* TITULO_H_INCLUDED */

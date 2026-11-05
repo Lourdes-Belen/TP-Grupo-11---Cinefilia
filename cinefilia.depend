@@ -579,3 +579,148 @@
 	<string.h>
 	"validaciones.h"
 
+1793243038 source:c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\alquiler.c
+	<stdlib.h>
+	<string.h>
+	"alquiler.h"
+	"cadena.h"
+	"util.h"
+
+1793193415 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\alquiler.h
+	"socio.h"
+	"titulo.h"
+
+1793193415 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\socio.h
+	<stdio.h>
+	"fecha.h"
+	"indice.h"
+	"lectura.h"
+	"validaciones.h"
+
+1793193415 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\fecha.h
+
+1793193415 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\indice.h
+	<stddef.h>
+
+1793193415 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\lectura.h
+	<stdio.h>
+	"indice.h"
+	"fecha.h"
+
+1793193415 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\validaciones.h
+
+1793849767 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\titulo.h
+	<stdio.h>
+	"indice.h"
+	"lectura.h"
+
+1793193415 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\cadena.h
+
+1793193415 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\util.h
+	<stdio.h>
+	<stdlib.h>
+	"alquiler.h"
+
+1793240504 source:c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\auditoria.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"auditoria.h"
+	"lectura.h"
+	"cadena.h"
+	"util.h"
+	"indice.h"
+
+1793193415 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\auditoria.h
+	"fecha.h"
+
+1793245335 source:c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\cadena.c
+	<string.h>
+	<ctype.h>
+	<stddef.h>
+	"cadena.h"
+
+1793243485 source:c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\fecha.c
+	<stdio.h>
+	<string.h>
+	<ctype.h>
+	<time.h>
+	"fecha.h"
+	"util.h"
+	"indice.h"
+
+1793245151 source:c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\indice.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"indice.h"
+
+1793245151 source:c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\lectura.c
+	<string.h>
+	"lectura.h"
+	"util.h"
+	"cadena.h"
+	"socio.h"
+	"titulo.h"
+	"config.h"
+
+1793193415 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\config.h
+
+1793243255 source:c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\novedad.c
+	<string.h>
+	"novedad.h"
+	"cadena.h"
+
+1793193415 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\novedad.h
+	"titulo.h"
+
+1793852675 source:c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\titulo.c
+	<stdlib.h>
+	<string.h>
+	"titulo.h"
+	"cadena.h"
+	"util.h"
+
+1793240618 source:c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\util.c
+	<string.h>
+	"util.h"
+	"cadena.h"
+	"config.h"
+
+1793245151 source:c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\validaciones.c
+	<ctype.h>
+	<stdio.h>
+	<string.h>
+	"validaciones.h"
+
+1793850576 source:c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"config.h"
+	"util.h"
+	"menu.h"
+	"fecha.h"
+	"indice.h"
+	"lectura.h"
+	"socio.h"
+	"titulo.h"
+	"novedad.h"
+	"alquiler.h"
+	"auditoria.h"
+	"generador.h"
+
+1793193415 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\menu.h
+
+1793193415 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\generador.h
+
+1793818727 source:c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\socio.c
+	<stdlib.h>
+	<string.h>
+	"socio.h"
+	"cadena.h"
+	"util.h"
+	"auditoria.h"
+	"config.h"
+	"menu.h"
+

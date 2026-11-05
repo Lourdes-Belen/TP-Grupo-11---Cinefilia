@@ -31,10 +31,12 @@
 #define MENU_AUDITORIA 'A'
 #define MENU_GENERAR_PRUEBA 'G'
 #define MENU_SALIR     'S'
+#define MENU_CONSULTAR_ID 'C' //EJERCICIO 1 LU (Practica defensa) Consultar un ID
+#define MENU_BAJA_TITULO 'B'  //EJERCICIO 2 LU (Practica defensa) Dar de Baja Titulos sin Stock
 
 static const char OPCIONES[][LENGTH_MENU] =
 {
-    "123456789AGS",
+    "123456789AGSCB", ///Se agrega la letra, de lo que agrege ACA!
     "Generar archivos binarios desde CSV",
     "Alta / Modificacion manual de socio",
     "Baja logica de socio",
@@ -46,7 +48,9 @@ static const char OPCIONES[][LENGTH_MENU] =
     "Listado de titulos disponibles",
     "Visualizar auditoria de errores de socios",
     "Generar archivos de prueba (CSV y novedades)",
-    "Salir y persistir"
+    "Salir y persistir",
+    "Consultar Titulo por ID", // EJERCICIO 1 LU
+    "Dar de Baja Titulos sin Stock" //EJERCICIO 2 LU
 };
 
 /******************************************************************************
@@ -144,6 +148,12 @@ int main(void)
                 break;
             case MENU_SALIR:
                 salir_y_persistir_ALU(&ind_socios, &ind_titulos, matriz_consumo, &fecha_proceso);
+                break;
+            case MENU_CONSULTAR_ID:
+                consultar_titulo_id(&ind_titulos, ARCH_TITULOS_BIN); //Agregado por LU
+                break;
+            case MENU_BAJA_TITULO:
+                baja_titulos_sin_stock(&ind_titulos, ARCH_TITULOS_BIN);
                 break;
         }
         if(op != MENU_SALIR)

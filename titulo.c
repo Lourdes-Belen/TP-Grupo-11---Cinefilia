@@ -4,6 +4,7 @@
 #include "cadena.h"
 #include "util.h"
 
+
 /*============================================================================*/
 /*            FUNCIONES A IMPLEMENTAR POR EL ALUMNO (version _ALU)             */
 /*============================================================================*/
@@ -151,3 +152,115 @@ int titulos_listar_ALU(const t_indice *indice, const char *path)
 
     return resultado;
 }
+/*********************************************************************/
+///***********************PRACTICA DEFENSA LU**************************///
+/* Ejercicio 1 - Consulta puntual de un titulo
+
+##Agregar una opcion **Consultar titulo por ID**.
+
+##Requerimiento:
+
+Solicitar un ID, buscarlo utilizando `indice_buscar_ALU` y mostrar todos los
+datos del titulo: ID, nombre, genero, stock y estado. Si el ID no existe o el
+titulo esta inactivo, informar claramente la situacion.
+
+## Temas que practica
+
+- TDA indice;
+- busqueda binaria;
+- uso de `t_reg_indice.nro_reg`;
+- lectura de un registro puntual con `titulo_leer_ALU`;
+- validacion de entrada numerica;
+- integracion de una nueva opcion al menu.*/
+///////////////////////////////////////////////////////////////////////////////////////////
+int consultar_titulo_id(t_indice *indice, const char *path)
+{
+    FILE *archivo = fopen(path,"rb");
+
+    if(!archivo){
+        printf("Error al leer el archivo\n");
+        return ERROR;
+    }
+
+    t_titulo titulo;
+    t_reg_indice id_consulta;
+    size_t pos_id;
+
+    printf("Ingrese ID del Titulo a Consultar:\n");
+    scanf("%ld",&id_consulta.id);
+
+   if(id_consulta.id >= 1 && id_consulta.id <= 10)
+    {
+        pos_id = indice_buscar_ALU(indice, &id_consulta,sizeof(id_consulta), compara_reg_indice_ALU);
+
+        if(pos_id)
+        {
+            fseek(archivo,(long)id_consulta.nro_reg * sizeof(t_titulo),SEEK_SET);
+            fread(&titulo,sizeof(t_titulo),1,archivo);
+
+            titulos_encabezado();
+            titulo_mostrar(&titulo);
+
+        }else
+        {
+            printf("Titulo inactivo o no existe\n");
+            return 0;
+        }
+    }
+
+    fclose(archivo);
+    return 1;
+}
+
+/*********************************************************************/
+///***********************PRACTICA DEFENSA LU**************************///
+int baja_titulos_sin_stock(t_indice *indice, const char *path)
+{
+    FILE *archivo = fopen(path,"r+b");
+
+    if(!archivo)
+    {
+        printf("Error al abrir el archivo\n");
+        return ERROR;
+    }
+
+    t_titulo titulo;
+    t_reg_indice registro;
+
+    fread(&titulo,sizeof(t_titulo),1,archivo);
+
+    while(!feof(archivo))
+    {
+        if(titulo.stock == 0)
+        {
+            //CAMBIAR ESTADO
+            titulo.estado = 'B';
+            //ESCRIBIRLO EN EL ARCHIVO
+            fseek(archivo,-(long)sizeof(t_titulo),SEEK_CUR);
+            fwrite(&titulo,sizeof(t_titulo),1,archivo);
+            fseek(archivo,0,SEEK_CUR);
+
+            //Posicionar el ID del Indice para luego eliminar
+            registro.id = (long)titulo.id;
+            //ELIMINARLO DEL INDICE
+            indice_eliminar_ALU(indice,&registro,sizeof(t_reg_indice),compara_reg_indice_ALU);
+        }
+
+        fread(&titulo,sizeof(t_titulo),1,archivo);
+    }
+
+    //AL FINALIZAR INFORMAR DADOS DE BAJA
+
+    fclose(archivo);
+    return 1;
+}
+
+
+
+
+
+
+
+
+
+
