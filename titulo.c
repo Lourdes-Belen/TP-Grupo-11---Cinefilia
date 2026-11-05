@@ -189,7 +189,7 @@ int consultar_titulo_id(t_indice *indice, const char *path)
     printf("Ingrese ID del Titulo a Consultar:\n");
     scanf("%ld",&id_consulta.id);
 
-   if(id_consulta.id >= 1 && id_consulta.id <= 10)
+   if(id_consulta.id >= 1 && id_consulta.id <= 10) //VALIDACION REVISAR
     {
         pos_id = indice_buscar_ALU(indice, &id_consulta,sizeof(id_consulta), compara_reg_indice_ALU);
 
@@ -244,12 +244,15 @@ int baja_titulos_sin_stock(t_indice *indice, const char *path)
             registro.id = (long)titulo.id;
             //ELIMINARLO DEL INDICE
             indice_eliminar_ALU(indice,&registro,sizeof(t_reg_indice),compara_reg_indice_ALU);
+
+            //MOSTRAR ELIMINADO
+            printf("Titulos dados de baja:\n");
+            titulo_mostrar(&titulo);
         }
 
         fread(&titulo,sizeof(t_titulo),1,archivo);
     }
 
-    //AL FINALIZAR INFORMAR DADOS DE BAJA
 
     fclose(archivo);
     return 1;
