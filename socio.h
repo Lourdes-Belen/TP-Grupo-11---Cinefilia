@@ -6,6 +6,7 @@
 #include "indice.h"
 #include "lectura.h"
 #include "validaciones.h"
+#include "vector.h"
 
 #define TAM_APYN      61
 #define TAM_CATEGORIA 11
@@ -84,5 +85,9 @@ int socios_listar_ALU(const t_indice *indice, const char *path);
 int socios_exportar_ALU(const t_indice *indice, const char *path, const char *path_export,
                     const t_fecha *fecha_proceso);
 void abm_socio_ALU(t_indice *indice, const t_fecha *fecha_proceso);
+
+/***********************************FUNCION AGREGADA LU*********************************************/
+int comparar_morosos(const void *a, const void *b);
+int listar_socios_morosos(const t_indice *indice, const char *path, const t_fecha *fecha_proceso);
 
 #endif /* SOCIO_H_INCLUDED */

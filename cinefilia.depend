@@ -590,12 +590,13 @@
 	"socio.h"
 	"titulo.h"
 
-1793193415 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\socio.h
+1793944762 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\socio.h
 	<stdio.h>
 	"fecha.h"
 	"indice.h"
 	"lectura.h"
 	"validaciones.h"
+	"vector.h"
 
 1793193415 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\fecha.h
 
@@ -693,7 +694,7 @@
 	<string.h>
 	"validaciones.h"
 
-1793899464 source:c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\main.c
+1793945660 source:c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -714,7 +715,7 @@
 
 1793193415 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\generador.h
 
-1793818727 source:c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\socio.c
+1793946233 source:c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\socio.c
 	<stdlib.h>
 	<string.h>
 	"socio.h"
@@ -723,4 +724,13 @@
 	"auditoria.h"
 	"config.h"
 	"menu.h"
+
+1793945959 source:c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\vector.c
+	"vector.h"
+	"socio.h"
+
+1793942753 c:\users\lourdesbelenbarbagel\desktop\tp topicos grupo 11\tp grupo 11 - cinefilia\vector.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
 

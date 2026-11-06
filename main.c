@@ -30,14 +30,15 @@
 #define MENU_LST_TIT   '9'
 #define MENU_AUDITORIA 'A'
 #define MENU_GENERAR_PRUEBA 'G'
-#define MENU_CONSULTAR_ID 'C'       /// ( LU Practica defensa) Consultar un ID
-#define MENU_BAJA_TITULO 'B'        /// ( LU Practica defensa) Dar de Baja Titulos sin Stock
-#define MENU_LISTAR_TITILOS 'L'     /// ( LU Practica defensa) Listar todos los titulos.
+#define MENU_CONSULTAR_ID 'C'           /// ( LU Practica defensa) Consultar un ID
+#define MENU_BAJA_TITULO 'B'            /// ( LU Practica defensa) Dar de Baja Titulos sin Stock
+#define MENU_LISTAR_TITILOS 'L'         /// ( LU Practica defensa) Listar todos los titulos.
+#define MENU_LISTAR_SOCIOS_MOROSOS 'M'  /// ( LU Practica defensa) Listar todos los socios morosos
 #define MENU_SALIR     'S'
 
 static const char OPCIONES[][LENGTH_MENU] =
 {
-    "123456789AGCBLS", ///Se agrega la letra, de lo que agrege ACA! - Agregue C - B - L
+    "123456789AGCBLMS", ///Se agrega la letra, de lo que agrege ACA! - Agregue C - B - L
     "Generar archivos binarios desde CSV",
     "Alta / Modificacion manual de socio",
     "Baja logica de socio",
@@ -52,6 +53,7 @@ static const char OPCIONES[][LENGTH_MENU] =
     "Consultar Titulo por ID",                      /// LU - EJERCICIO 1
     "Dar de Baja Titulos sin Stock",                /// LU - EJERCICIO 2
     "Listar todos los Titulos",                     /// LU - LISTAR TITULOS
+    "Listar socios morosos",                        /// LU - LISTAR MOROSOS
     "Salir y persistir"
 };
 
@@ -156,6 +158,9 @@ int main(void)
                 break;
             case MENU_LISTAR_TITILOS: /**AGREGADO LU - LISTAR TITULOS***/
                 listar_todos_los_titulos(ARCH_TITULOS_BIN);
+                break;
+            case MENU_LISTAR_SOCIOS_MOROSOS:
+                listar_socios_morosos(&ind_socios,ARCH_SOCIOS_BIN,&fecha_proceso);
                 break;
             case MENU_SALIR:
                 salir_y_persistir_ALU(&ind_socios, &ind_titulos, matriz_consumo, &fecha_proceso);

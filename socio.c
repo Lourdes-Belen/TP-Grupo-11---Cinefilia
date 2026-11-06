@@ -939,46 +939,54 @@ void abm_socio_ALU(t_indice *indice, const t_fecha *fecha_proceso)
 
 ///***********************PRACTICA DEFENSA LU**************************///
 ///## Ejercicio 3 - Listar Socios con Cuota Vencida
-int listar_socios_morosos(t_indice, const char *path, t_fecha *fecha_proceso)
+int listar_socios_morosos(const t_indice *indice, const char *path, const t_fecha *fecha_proceso)
 {
-    FILE *archivo_socios = fopen(path,"rb");
+    FILE *archivo;
+    tVector morosos;
+    t_socio socio;
+    const t_reg_indice *p;
+    size_t i;
 
-    if(!archivo_socios)
+    archivo = fopen(path,"rb");
+    if(!archivo)
     {
-        printf("Error al abrir el archivo\n");
+        printf("Error al abrir el archivo de socios\n");
         return ERROR;
     }
 
-    t_socio socio; //Para el manejo del archivo
-    t_socio *morosos;
-    int cantidad_morosos = 0;
-
-    morosos = malloc(cantidad_morosos * sizeof(t_socio));
-    if(!morosos){
-        printf("Error al reservar memoria\n");
+    if(!crearVector(&morosos,sizeof(t_socio)))
+    {
+        fclose(archivo);
         return ERROR;
     }
 
-    fread(&socio,sizeof(t_socio),1,archivo_socios);
+    p = (const t_reg_indice*)indice->vindice;
 
-    while(!feof(archivo_socios))
+    for(i = 0; i < indice->cantidad_elementos_actual; i++,p++)
     {
-
-        if(!cuota_al_dia_ALU(&socio.fecha_ultima_cuota, fecha_proceso))
+        if(!socio_leer_ALU(archivo,p->nro_reg,&socio))
         {
-            morosos[cantidad_morosos] = socio;
-            cantidad_morosos++;
+            destruirVector(&morosos);
+            fclose(archivo);
+            return ERROR;
         }
 
-        fread(&socio,sizeof(t_socio),1,archivo_socios);
-
+        if(!cuota_al_dia_ALU(&socio.fecha_ultima_cuota,fecha_proceso))
+        {
+            insertarEnOrden(&morosos,&socio,sizeof(t_socio),comparar_morosos);
+        }
     }
 
-    ///Ordenar vector de morosos
-    ///mostrar moroso y calcularle los dias de atraso para mostrarlo
+    for(i = 0; i < (size_t)morosos.cantElem;i++)
+    {
+        t_socio *actual = (t_socio *)morosos.vec + i;
+        socio_mostrar(actual);
+        printf("Dias de atraso %d",diferencia_dias(fecha_proceso,&actual->fecha_ultima_cuota));
+        printf("\n");
+    }
 
-    free(morosos);
-    fclose(archivo_socios);
-
+    destruirVector(&morosos);
+    fclose(archivo);
     return 0;
 }
+
